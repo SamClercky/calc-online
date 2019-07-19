@@ -1,0 +1,14 @@
+.vscode
+**/*.rs.bk
+matrix-backend/target
+matrix_backend/Cargo.lock
+matrix_backend/bin
+matrix-backend/pkg
+matrix_backend/wasm-pack.log
+matrix-backend/Cargo.lock
+frontend/node_modules
+frontend/dist
+frontend/package-lock.json
+**/.cargo-ok
+**/.appveyor.yml
+**/.travis.yml
