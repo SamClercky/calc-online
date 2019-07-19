@@ -1,3 +1,4 @@
+// @ts-ignore
 const path = require('path');
 // @ts-ignore
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -26,6 +27,7 @@ const AUTHOR = packageJson.author;
 module.exports = {
   entry: "./src/bootstrap.js",
   output: {
+	// @ts-ignore
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     chunkFilename: "[name].[id].js"
@@ -54,7 +56,9 @@ module.exports = {
 					options: {
 						emitCss: true,
 						hotReload: true,
-						style: sass()
+						style: sass({
+							includePaths: ['src', 'node_modules']
+						})
 					}
 				}
 			},

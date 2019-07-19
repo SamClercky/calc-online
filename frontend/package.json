@@ -5,10 +5,11 @@
   "repository": "https://github.com/SamClercky/calc-online-frontend",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "webpack-dev-server --content-base public"
+    "start": "webpack-dev-server --content-base public --host 0.0.0.0"
   },
   "dependencies": {
-    "calc-online": "file:../pkg/"
+    "@types/node": "^12.6.8",
+    "calc-online": "file:../matrix-backend/pkg"
   },
   "keywords": [
     "front-end",

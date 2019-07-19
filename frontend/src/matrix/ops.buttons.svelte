@@ -2,7 +2,7 @@
     export  let symbol = "+";
 </script>
 
-<style type="text/sass">
+<style type="text/sass" lang="scss">
     @import "../global_vars";
 
     button {
