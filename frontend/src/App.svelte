@@ -1,24 +1,28 @@
 <script>
 	import Matrix from "./matrix/index.svelte";
 
-	import * as wasm from "calc-online";
-	export let name;
+	// import * as wasm from "calc-online";
+	// export let name;
 
-	function onclick() {
-		wasm.greet("Andreas");
-	}
+	// function onclick() {
+	// 	wasm.greet("Andreas");
+	// }
 </script>
 
 <style type="text/sass">
-	h1 {
-		color: blue;
+	main {
+		width: 100vw;
+		height: 100vh;
+	}
+	:global(.app__matrix) {
+		width: 100%;
+		height: 100%;
 	}
 </style>
 
 <svelte:head>
-	<title>Calc online</title>
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
 </svelte:head>
 
-<h1 on:click={onclick}>Hello {name}!</h1>
-<Matrix />
+<main>
+	<Matrix className="app__matrix" />
+</main>

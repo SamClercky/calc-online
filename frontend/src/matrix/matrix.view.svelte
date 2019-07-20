@@ -1,5 +1,9 @@
-<style>
+<script>
+    export let className;
+</script>
 
+<style type="text/sass" lang="scss">
+    @import "../global_vars";
 </style>
 
-<div>Matrix view</div>
+<div class={className}>Matrix view</div>

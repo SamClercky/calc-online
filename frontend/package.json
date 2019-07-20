@@ -8,6 +8,8 @@
     "start": "webpack-dev-server --content-base public --host 0.0.0.0"
   },
   "dependencies": {
+    "@material/button": "^3.0.0",
+    "@material/ripple": "^3.0.0",
     "@types/node": "^12.6.8",
     "calc-online": "file:../matrix-backend/pkg"
   },

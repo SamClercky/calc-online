@@ -1,7 +1,9 @@
 <script>
     import OpsButtons from "./ops.buttons.svelte";
 
-    const symbols = ["+", "-", "*", "="];
+    export let className = "";
+
+    const symbols = ["add", "remove", "clear", "="];
 </script>
 
 <style type="text/sass" lang="scss">
@@ -10,21 +12,15 @@
     li {
         display: block;
         list-style: none;
-        padding: 0px;
-        margin: 0px;
         width: min-content;
     }
     ul {
-        width: 30%;
-        max-width: 100px;
-        background: $PRIMARY_COLOR_DARK;
-        height: 100vh;
         padding: $PADDING;
     }
 </style>
 
-<ul>
+<section class={className}>
     {#each symbols as symbol}
-        <li><OpsButtons {symbol} /></li>
+        <OpsButtons {symbol} />
     {/each}
-</ul>
+</section>
