@@ -1,9 +1,10 @@
 <script>
     import OpsButtons from "./ops.buttons.svelte";
+    import Draggable from "../utils/draggable.svelte";
+    import {ops} from "./ops.ts"
 
     export let className = "";
-
-    const symbols = ["add", "remove", "clear", "="];
+    const symbols = Object.values(ops);
 </script>
 
 <style type="text/sass" lang="scss">
@@ -19,8 +20,10 @@
     }
 </style>
 
-<section class={className}>
+<aside class={className}>
     {#each symbols as symbol}
-        <OpsButtons {symbol} />
+        <Draggable>
+            <OpsButtons {symbol} />
+        </Draggable>
     {/each}
-</section>
+</aside>

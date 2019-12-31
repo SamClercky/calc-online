@@ -1,5 +1,10 @@
 <script>
-  export let symbol = "+";
+  export let symbol = "add";
+
+  function touchstart(event) {
+    ev.dataTransfer.setData("text", symbol);
+    console.log(`${symbol} wordt verplaatst`);
+  }
 </script>
 
 <style type="text/sass" lang="scss">
@@ -19,7 +24,9 @@
   }
 </style>
 
-<button class="button-ops mdc-button">
+<button
+  class="button-ops mdc-button"
+  >
   <!-- <span class="mdc-button__label">{symbol}</span> -->
   <i class="material-icons">{symbol}</i>
 </button>

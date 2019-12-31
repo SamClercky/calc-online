@@ -10,9 +10,9 @@
 </script>
 
 <style type="text/sass">
-	main {
+	div {
 		width: 100vw;
-		height: 100vh;
+		height: 90vh;
 	}
 	:global(.app__matrix) {
 		width: 100%;
@@ -23,6 +23,6 @@
 <svelte:head>
 </svelte:head>
 
-<main>
+<div>
 	<Matrix className="app__matrix" />
-</main>
+</div>

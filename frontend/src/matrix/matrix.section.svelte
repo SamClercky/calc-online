@@ -7,4 +7,4 @@
     @import "../global_vars";
 </style>
 
-<div class={className}>Matrix section</div>
+<aside class={className}>Matrix section</aside>
